@@ -1,0 +1,60 @@
+server:
+  name: "ZenitMc"
+  aliases:
+    - "Zenit"
+    - "Zenitmc"
+    - "Zenit mc"
+
+ai:
+  enabled: true
+  api-key: "BURAYA_API_KEY"
+  endpoint: "https://api.openai.com/v1/responses"
+  model: "gpt-4.1-mini"
+
+  system-prompt: |
+    Sen sadece {server} sunucusunu bilen bir Minecraft sunucu rehberisin.
+    {server} dışındaki sunucular hakkında KESİNLİKLE bilgi uydurma veya tahmin yürütme.
+
+    Kurallar:
+    - Eğer soru {server} ile ilgiliyse, sunucu rehberindeki bilgilere dayanarak kısa ve anlaşılır Türkçe cevap ver.
+    - Eğer soru başka bir sunucu ismi içeriyorsa veya {server} dışı bir sunucu hakkında bilgi istiyorsa:
+      "{server} dışında bir sunucu hakkında bilgim yok." anlamında net cevap ver.
+
+    Cevapların net, maddeli ve komutlar görünür olacak şekilde olsun.
+
+  include-server-knowledge: true
+  max-answer-chars: 900
+  max-knowledge-chars: 6000
+
+limits:
+  cooldown-seconds: 25
+
+  daily:
+    default: 10
+
+    # Sıralama önemli değil; plugin en yüksek limiti seçer.
+    tiers:
+      - permission: "airehber.vip1"
+        limit: 20
+      - permission: "airehber.vip2"
+        limit: 35
+      - permission: "airehber.vip3"
+        limit: 50
+
+messages:
+  processing: "&7Sorun işleniyor, lütfen bekle..."
+  error: "&cBir hata oluştu, lütfen daha sonra tekrar dene."
+  reloaded: "&aConfig ve rehber bilgileri yenilendi."
+  no-permission: "&cBu komutu kullanmak için iznin yok."
+  no-question: "&cLütfen bir soru yaz: &e/rehber {server} hakkında bilgi ver"
+
+  unknown-server: "&c✖ &f{server} dışında bir sunucu hakkında bilgim yok."
+
+  cooldown: "&e⏳ &fLütfen &a{seconds}&f saniye bekle."
+  daily-limit: "&c✖ &fGünlük hakkın bitti. (&e{used}&f/&e{limit}&f)"
+
+  stats:
+    header: "&6✦✦✦ &e{server} Rehber İstatistik &6✦✦✦"
+    line1: "&7Günlük kullanım: &e{used}&7/&e{limit} &8( Kalan: &a{remaining}&8 )"
+    line2: "&7Cooldown: &e{cooldown}s"
+    adminTotal: "&7Bugünkü toplam istek: &e{total}"

@@ -1,0 +1,32 @@
+name: AIRehber
+main: me.mrhistories.airehber.AIGuidePlugin
+version: 1.0.0
+api-version: '1.20'
+author: MrHistories
+description: AI destekli oyuncu rehberi (Sunucu adı config'ten)
+
+commands:
+  rehber:
+    description: AI rehberden yardım al
+    usage: /rehber <soru> | /rehber reload | /rehber stats
+    aliases: [aiyardim, yardimai]
+    permission: airehber.use
+
+permissions:
+  airehber.use:
+    description: AI rehberi kullanma izni
+    default: true
+
+  airehber.admin:
+    description: AI rehber yönetim izni (reload + stats toplam)
+    default: op
+
+  airehber.vip1:
+    description: VIP tier 1 (günlük limit artar)
+    default: false
+  airehber.vip2:
+    description: VIP tier 2 (günlük limit artar)
+    default: false
+  airehber.vip3:
+    description: VIP tier 3 (günlük limit artar)
+    default: false

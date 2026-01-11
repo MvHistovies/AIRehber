@@ -1,0 +1,47 @@
+server:
+  name: "ZenitMC"
+  mode: "Emek / Skyblock"
+  language: "TR"
+
+about:
+  - "ZenitMc, emek odaklı Skyblock sunucusudur."
+  - "Yeni başlayanlar için /kurallar ve /is menüsü önerilir."
+
+
+
+rules:
+  - "Küfür/hakaret yasak."
+  - "Hile, macro, dupe kesin yasak."
+  - "Ticarette dolandırıcılık yasak."
+  - "Yetkili kararları son karardır."
+
+economy:
+  currency: "Para"
+  tips:
+    - "Günlük görevleri yaparak para kasabilirsin."
+    - "Farm ürünlerini pazara satarak gelir elde edebilirsin."
+    - "Etkinliklerden anahtar/kasa ödülleri kazanabilirsin."
+    - "/warp çiftlik üzerinden topladığın ürünleri /sell all komutu ile satabilirsin /warp mobarena da topladığın dehşet parçacıklarını oyunculara satabilir Postacının verdiği görevleri yapıp para yumurtası elde edebilirsin. veya oyunculara işçilik yaparak kazana bilirsin."
+
+commands:
+  - "/spawn: Spawn'a gider."
+  - "/is: Skyblock menüsü."
+  - "/ah: Pazarı açar."
+  - "/warp: Warp menüsü."
+  - "/vip: VIP menüsü."
+  - "/kurallar: Sunucu kurallarını gösterir."
+  - "/postacı: Postacı görevlerini gösterir."
+
+vip:
+  perks:
+    - "VIP oyunculara özel kit."
+    - "Özel Özellikler,Tag ve Daha Fazlası!"
+    - "VIP ayrıcalıkları için /vip menüsünü kullan."
+
+events:
+  - "Günlük ödüller: /rewards"
+  - "Günlük Postacı Görevleri: /postacı"
+
+faq:
+  "Para nasıl kasılır?": "Farm yap, günlük görevleri tamamla, postacı görevlerini tamamla , işçi ol , etkinlikleri takip et."
+  "VIP nasıl alınır?": "Web sitemizden alabilirsin /site."
